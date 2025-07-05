@@ -48,14 +48,13 @@ table {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   height: 75px;
   transition: all 0.3s cubic-bezier(1, 1, 0.5, 0.3);
+  display: flex;
+  justify-content: center;
 }
 .header.transparent {
   backdrop-filter: blur(10px);
@@ -65,7 +64,7 @@ table {
   background-color: white;
   border-bottom: 1px solid rgb(78, 78, 78);
 }
-.header.solid ul li a {
+.header.solid .header-content ul li a {
   color: black;
 }
 .header.solid .search .input, .header.solid .search .input::placeholder {
@@ -78,44 +77,51 @@ table {
   width: 150px;
   border-bottom: 1px solid black;
 }
-.header .logo-header {
-  flex: 2;
+.header .header-content {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .header-content .logo-header {
   display: flex;
   gap: 10px;
   padding: 10px 50px;
   height: 56px;
 }
-.header .logo-header img {
+.header .header-content .logo-header img {
   height: 100%;
   margin-left: 30px;
 }
-.header .logo-header h1 {
+.header .header-content .logo-header h1 {
   font-size: 28px;
 }
-.header ul {
-  flex: 1;
+.header .header-content ul {
   display: flex;
   gap: 40px;
   flex-direction: row;
   list-style: none;
-  margin: 0 50px;
+  margin-left: 50px;
 }
-.header ul li a {
+.header .header-content ul li a {
   text-decoration: none;
   color: white;
   font-family: "BPG Nostalgia", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
-.header ul li a:hover {
+.header .header-content ul li a:hover {
   color: #878686;
 }
 
 main h1 {
-  font-size: 50px;
-  margin-top: 50px;
-  margin-left: 40px;
-  font-family: "Arial GEO Bold", sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+}
+main a, main p {
+  font-family: "BPG Nostalgia", sans-serif;
+  font-weight: 400px;
 }
 
 .search {
@@ -163,15 +169,25 @@ main h1 {
 .landing-page {
   height: 100vh;
   background-color: white;
-  background-image: url("../images/Mann-Li-PNAS-MAin_0.jpeg");
+  background-image: linear-gradient(to left, black, transparent), url("../images/air-pollution.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
   color: white;
+}
+.landing-page .text {
+  max-width: 1150px;
+}
+.landing-page .text h1 {
+  font-size: 85px;
+  margin-left: 100px;
+}
+.landing-page .text p {
+  font-size: 18px;
+  margin-left: 100px;
+  line-height: 25px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bpg-nino-mtavruli": "^1.0.0",
     "bpg-nostalgia": "^1.0.0"
   }
 }
