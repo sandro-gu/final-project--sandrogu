@@ -1,0 +1,14 @@
+// 1. Base
+@use 'base/resetcss';
+
+// 2. Layout
+@use 'layout/header';
+@use 'layout/main';
+
+// 3. Components
+@use 'components/search';
+
+// 4. Pages
+@use 'pages/landing';
+@use 'pages/info';
+@use 'pages/contact';

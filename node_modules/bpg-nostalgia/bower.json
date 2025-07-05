@@ -1,0 +1,27 @@
+{
+  "name": "bpg-nostalgia",
+  "description": "BPG Nostalgia Web-Font Package",
+  "version": "1.0.0",
+  "keywords": ["ttf", "woff", "woff2", "svg", "font", "web-font", "bpg-nostalgia"],
+  "main": [
+    "css/bpg-nostalgia.css"
+  ],
+  "homepage": "https://github.com/web-fonts/bpg-nostalgia",
+  "authors": [
+    "Lado Lomidze <lado.lomidze@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-fonts/bpg-nostalgia.git"
+  },
+  "license": ["MIT", "CC-BY-NC-ND-4.0"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.md",
+    "font.json"
+  ]
+}

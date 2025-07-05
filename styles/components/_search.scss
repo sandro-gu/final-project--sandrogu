@@ -1,0 +1,46 @@
+.search {
+	position: relative;
+    height: 35px;
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	.input {
+		border: 0;
+		border-bottom: 1px solid transparent;
+		font-size: 16px;
+		font-family: "BPG Nostalgia", sans-serif;
+		padding: 15px 10px 15px 0;
+		height: 10px;
+		width: 0;
+		background: transparent;
+		text-align: right;
+		color: white;
+		transition: width 0.3s ease, border-bottom-color 0.3s ease;
+
+		&::placeholder {
+			color: white;
+		}
+	}
+
+	.btn {
+		border: 0;
+		font-size: 16px;
+		height: 40px;
+		width: 40px;
+		background: transparent;
+		cursor: pointer;
+		color: white;
+	}
+
+	&.active .input {
+		width: 150px;
+		border-bottom: 1px solid white;
+	}
+
+	.input:focus,
+	.btn:focus {
+		outline: 0;
+	}
+}
