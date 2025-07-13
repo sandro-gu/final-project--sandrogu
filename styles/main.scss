@@ -6,7 +6,8 @@
 @use 'layout/main';
 
 // 3. Components
-// @use 'components/carousel';
+@use 'components/carousel';
+@use 'components/accordion';
 @use 'components/search';
 
 // 4. Pages

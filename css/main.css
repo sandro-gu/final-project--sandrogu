@@ -55,6 +55,7 @@ table {
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 .header.transparent {
   backdrop-filter: blur(10px);
@@ -124,109 +125,13 @@ main a, main p {
   font-weight: 400px;
 }
 
-.search {
-  position: relative;
-  height: 35px;
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.search .input {
-  border: 0;
-  border-bottom: 1px solid transparent;
-  font-size: 16px;
-  font-family: "BPG Nostalgia", sans-serif;
-  padding: 15px 10px 15px 0;
-  height: 10px;
-  width: 0;
-  background: transparent;
-  text-align: right;
-  color: white;
-  transition: width 0.3s ease, border-bottom-color 0.3s ease;
-}
-.search .input::placeholder {
-  color: white;
-}
-.search .btn {
-  border: 0;
-  font-size: 16px;
-  height: 40px;
-  width: 40px;
-  background: transparent;
-  cursor: pointer;
-  color: white;
-}
-.search.active .input {
-  width: 150px;
-  border-bottom: 1px solid white;
-}
-.search .input:focus,
-.search .btn:focus {
-  outline: 0;
-}
-
-.landing-page {
-  height: 100vh;
-  background-color: white;
-  background-image: linear-gradient(to left, black, transparent), url("../images/air-pollution.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-}
-.landing-page .text {
-  max-width: 1150px;
-}
-.landing-page .text h1 {
-  font-size: 85px;
-  margin-left: 8vw;
-}
-.landing-page .text p {
-  font-size: 18px;
-  margin-left: 8vw;
-  line-height: 25px;
-}
-
-.article-box {
-  display: flex;
-  justify-content: center;
-}
-.article-box .article {
-  width: 80vw;
-  max-width: 1250px;
-  padding-top: 100px;
-}
-.article-box .article .title {
-  margin: 30px 0;
-}
-.article-box .article .title h1 {
-  font-size: 60px;
-}
-.article-box .article .info {
-  display: flex;
-}
-.article-box .article .info .info-textbox {
-  flex: 2;
-}
-.article-box .article .info .imgbox {
-  flex: 1;
-}
-.article-box .article .info .imgbox img {
-  width: 100%;
-  max-width: 400px;
-}
-
 .carousel-box {
   background-color: rgb(38, 36, 46);
   height: 222px;
+  z-index: 1;
 }
 .carousel-box .carousel {
-  margin: 100px auto;
+  margin: auto;
   padding: 20px 0;
   overflow: hidden;
   display: flex;
@@ -300,4 +205,162 @@ main a, main p {
   100% {
     transform: translateX(-100%);
   }
+}
+.accordion-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+.accordion-container .accordion-introtext {
+  width: 75vw;
+  max-width: 1500px;
+  margin-bottom: 50px;
+}
+.accordion-container .accordion-introtext h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.accordion-container .accordion-box {
+  width: 60vw;
+  max-width: 1200px;
+  /* Style the buttons that are used to open and close the accordion panel */
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the accordion panel. Note: hidden by default */
+}
+.accordion-container .accordion-box .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 40px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.accordion-container .accordion-box .active, .accordion-container .accordion-box .accordion:hover {
+  background-color: #ccc;
+}
+.accordion-container .accordion-box .panel-inner {
+  display: flex;
+  gap: 20px;
+}
+.accordion-container .accordion-box .panel {
+  margin-bottom: 50px;
+  padding: 18px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-container .accordion-box .panel .panel-inner .panel-logo {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  flex-shrink: 0;
+}
+
+.search {
+  position: relative;
+  height: 35px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search .input {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  font-size: 16px;
+  font-family: "BPG Nostalgia", sans-serif;
+  padding: 15px 10px 15px 0;
+  height: 10px;
+  width: 0;
+  background: transparent;
+  text-align: right;
+  color: white;
+  transition: width 0.3s ease, border-bottom-color 0.3s ease;
+}
+.search .input::placeholder {
+  color: white;
+}
+.search .btn {
+  border: 0;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+.search.active .input {
+  width: 150px;
+  border-bottom: 1px solid white;
+}
+.search .input:focus,
+.search .btn:focus {
+  outline: 0;
+}
+
+.landing-page {
+  height: 100vh;
+  background-color: white;
+  background-image: linear-gradient(to left, black, transparent), url("../images/air-pollution.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.landing-page .text {
+  max-width: 1150px;
+}
+.landing-page .text h1 {
+  font-size: 85px;
+  margin-left: 8vw;
+}
+.landing-page .text p {
+  font-size: 18px;
+  margin-left: 8vw;
+  line-height: 25px;
+}
+
+.article-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.article-box .article {
+  width: 80vw;
+  max-width: 1250px;
+  padding-top: 100px;
+}
+.article-box .article .title {
+  margin: 30px 0;
+}
+.article-box .article .title h1 {
+  font-size: 60px;
+}
+.article-box .article .info {
+  display: flex;
+}
+.article-box .article .info .info-textbox {
+  flex: 2;
+}
+.article-box .article .info .imgbox {
+  flex: 1;
+}
+.article-box .article .info .imgbox img {
+  width: 100%;
+  max-width: 400px;
 }/*# sourceMappingURL=main.css.map */
