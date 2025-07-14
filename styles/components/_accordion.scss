@@ -1,10 +1,10 @@
 .accordion-container {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 200px;
+    margin: 100px 0;
 
     .accordion-introtext {
         width: 75vw;
@@ -16,7 +16,9 @@
             font-size: 28px;
             margin-bottom: 20px;
         }
-
+        p {
+            font-size: 18px;
+        }
 
     }
 
@@ -56,10 +58,20 @@
         .panel-inner .panel-logo {
             width: 100px;
             height: 100px;
-            background-color: blue;
-            flex-shrink: 0;
-
+            background-size: contain;
+            background-position: center;
+            flex-shrink: 0;      
         }
+        
+        #home {
+            background-image: url('../images/home.png');
+        }
+        #cycle {
+            background-image: url('../images/cycle.png');
+        }
+        #apple {
+            background-image: url('../images/apple.png');
+        }      
 
         margin-bottom: 50px;
         padding: 18px 18px;
@@ -73,4 +85,3 @@
         }
     }
 }
-

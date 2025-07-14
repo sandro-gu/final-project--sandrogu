@@ -49,6 +49,18 @@
 		display: flex;
 		.info-textbox {
 			flex: 2;
+
+			.paragraph {
+				text-indent: 10px;
+				margin-bottom: 40px;
+				padding-right: 40px;
+
+				p {
+					color: black;
+					line-height: 30px;
+					font-size: 18px;
+				}
+			}
 		}
 		.imgbox {
 			flex: 1;
@@ -56,10 +68,65 @@
 			img {
 				width: 100%;
 				max-width: 400px;
+				min-width: 200px;
+			}
+
+			p {
+				color: #333;
+				margin: 4px 8px;
+				font-size: 14px;
+				line-height: 20px;
 			}
 		}
 	}
 
 
 }
+}
+
+
+
+.moreinfo-container {
+	margin-top: 50px;
+	height: 700px;
+	background-color: #efeff0;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-content: center;
+	align-content: center;
+
+	.moreinfo-content {
+		max-width: 1000px;
+		text-align: center;
+
+		font-size: 23px;
+		line-height: 32px;
+
+		p {
+			margin: 20px 0;
+		}
+
+		h1 {
+			font-size: 45px;
+			margin-bottom: 30px;
+		}
+		
+		button {
+			background-color: #8295c9;
+			padding: 18px 25px;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			margin-top: 50px;
+
+			font-family: "BPG Nostalgia", sans-serif;
+			font-weight: 400px;
+			font-size: 23px;
+
+			cursor: pointer;
+		}
+	}
 }

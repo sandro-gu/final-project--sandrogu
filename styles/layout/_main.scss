@@ -1,5 +1,15 @@
-main {
-	h1, h2, h3, h4 {
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main, footer, header {
+    position: relative;
+    display: block;
+    width: 100%;
+
+	h1, h2, h3, h4, button {
 		font-family: "BPG Nino Mtavruli", sans-serif;
 		font-weight: 700;
 	}
@@ -7,5 +17,6 @@ main {
 	a, p {
 		font-family: "BPG Nostalgia", sans-serif;
 		font-weight: 400px;
+		line-height: 25px;
 	}
 }

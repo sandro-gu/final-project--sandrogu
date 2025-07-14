@@ -116,19 +116,144 @@ table {
   color: #878686;
 }
 
-main h1, main h2, main h3, main h4 {
+footer {
+  margin-top: auto;
+  background-color: #333;
+  color: white;
+  padding: 60px 0 30px;
+  text-align: center;
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: start;
+}
+footer .container .text-column {
+  flex: 2;
+}
+footer .container .text-column h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+footer .container .text-column ul {
+  list-style: none;
+}
+footer .container .text-column ul li {
+  margin-bottom: 10px;
+}
+footer .container .text-column ul li a {
+  color: rgb(189, 189, 189);
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .container .text-column ul li a:hover {
+  color: #aaaaaa;
+}
+footer .container .logo-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  min-width: 200px;
+}
+footer .container .logo-section .large-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+footer .container .logo-section .large-logos .large-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 5%;
+}
+footer .container .logo-section .large-logos #tbc {
+  background-image: url("../images/tbc-logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer .container .logo-section .large-logos #geolab {
+  background-image: url("../images/geolab-logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer .container .logo-section .small-logos {
+  display: flex;
+  gap: 10px;
+}
+footer .container .logo-section .small-logos .small-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 3%;
+  color: #878190;
+  transition: color 0.3s ease;
+}
+footer .container .logo-section .small-logos .small-logo i {
+  font-size: 35px;
+}
+footer .container .logo-section .small-logos .small-logo:hover {
+  font-size: 38px;
+  color: #aaaaaa;
+}
+footer .credits-section {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .credits-section .line {
+  width: 95vw;
+  max-width: 1200px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  height: 1.5px;
+}
+footer .credits-section .credit-text {
+  width: 95vw;
+  max-width: 1200px;
+}
+footer .credits-section .credit-text p {
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: start;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main, footer, header {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+main h1, main h2, main h3, main h4, main button, footer h1, footer h2, footer h3, footer h4, footer button, header h1, header h2, header h3, header h4, header button {
   font-family: "BPG Nino Mtavruli", sans-serif;
   font-weight: 700;
 }
-main a, main p {
+main a, main p, footer a, footer p, header a, header p {
   font-family: "BPG Nostalgia", sans-serif;
   font-weight: 400px;
+  line-height: 25px;
 }
 
 .carousel-box {
+  position: relative;
   background-color: rgb(38, 36, 46);
   height: 222px;
   z-index: 1;
+  margin: 50px 0;
 }
 .carousel-box .carousel {
   margin: auto;
@@ -207,12 +332,12 @@ main a, main p {
   }
 }
 .accordion-container {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
-  margin-bottom: 200px;
+  margin: 100px 0;
 }
 .accordion-container .accordion-introtext {
   width: 75vw;
@@ -222,6 +347,9 @@ main a, main p {
 .accordion-container .accordion-introtext h3 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+.accordion-container .accordion-introtext p {
+  font-size: 18px;
 }
 .accordion-container .accordion-box {
   width: 60vw;
@@ -263,8 +391,18 @@ main a, main p {
 .accordion-container .accordion-box .panel .panel-inner .panel-logo {
   width: 100px;
   height: 100px;
-  background-color: blue;
+  background-size: contain;
+  background-position: center;
   flex-shrink: 0;
+}
+.accordion-container .accordion-box .panel #home {
+  background-image: url("../images/home.png");
+}
+.accordion-container .accordion-box .panel #cycle {
+  background-image: url("../images/cycle.png");
+}
+.accordion-container .accordion-box .panel #apple {
+  background-image: url("../images/apple.png");
 }
 
 .search {
@@ -357,10 +495,63 @@ main a, main p {
 .article-box .article .info .info-textbox {
   flex: 2;
 }
+.article-box .article .info .info-textbox .paragraph {
+  text-indent: 10px;
+  margin-bottom: 40px;
+  padding-right: 40px;
+}
+.article-box .article .info .info-textbox .paragraph p {
+  color: black;
+  line-height: 30px;
+  font-size: 18px;
+}
 .article-box .article .info .imgbox {
   flex: 1;
 }
 .article-box .article .info .imgbox img {
   width: 100%;
   max-width: 400px;
+  min-width: 200px;
+}
+.article-box .article .info .imgbox p {
+  color: #333;
+  margin: 4px 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.moreinfo-container {
+  margin-top: 50px;
+  height: 700px;
+  background-color: #efeff0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.moreinfo-container .moreinfo-content {
+  max-width: 1000px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 32px;
+}
+.moreinfo-container .moreinfo-content p {
+  margin: 20px 0;
+}
+.moreinfo-container .moreinfo-content h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.moreinfo-container .moreinfo-content button {
+  background-color: #8295c9;
+  padding: 18px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+  font-family: "BPG Nostalgia", sans-serif;
+  font-weight: 400px;
+  font-size: 23px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

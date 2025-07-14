@@ -1,7 +1,9 @@
 .carousel-box {
+	position: relative;
 	background-color: rgb(38, 36, 46);
 	height: 222px;
     z-index: 1;
+	margin: 50px 0;
 
 	.carousel {
 	margin: auto;

@@ -1,0 +1,138 @@
+footer {
+	margin-top: auto;
+	background-color: #333;
+	color: white;
+	padding: 60px 0 30px;
+	text-align: center;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+		display: flex;
+		justify-content: space-around;
+
+		text-align: start;
+
+		.text-column {
+			flex: 2;
+			h3 {
+				font-size: 18px;
+				margin-top: 10px;
+				margin-bottom: 30px;
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					margin-bottom: 10px;
+
+					a {
+						color: rgb(189, 189, 189);
+						text-decoration: none;
+						font-size: 14px;
+
+						&:hover {
+							color: #aaaaaa;
+						}
+					}
+				}
+			}
+		}
+
+		.logo-section {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 20px;
+			min-width: 200px;
+
+			.large-logos {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 15px;
+
+				cursor: pointer;
+				
+				.large-logo {
+					width: 90px;
+					height: 90px;
+					border-radius: 5%;
+				}
+
+				#tbc {
+					background-image: url('../images/tbc-logo.png');
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				
+				#geolab {
+					background-image: url('../images/geolab-logo.png');
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+
+			.small-logos {
+				display: flex;
+				gap: 10px;
+				
+				.small-logo {
+					width: 35px;
+					height: 35px;
+					border-radius: 3%;
+
+					color: #878190;
+
+					transition: color 0.3s ease;
+
+					i {
+						font-size: 35px
+					}
+
+					&:hover {
+						font-size: 38px;
+						color: #aaaaaa;
+					}
+				}
+			}
+		}
+    }
+
+
+
+	.credits-section {
+		margin-top: 20px;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.line {
+			width: 95vw;
+			max-width: 1200px;
+    		border-top: 2px solid rgba(255, 255, 255, 0.2);
+
+			height: 1.5px;
+		}
+
+		.credit-text {
+			width: 95vw;
+			max-width: 1200px;
+			p {
+				font-size: 14px;
+				margin-top: 30px;
+				text-align: start;
+			}
+
+		}
+	}
+}

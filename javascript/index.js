@@ -66,4 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     }
+
+
+
+    // logo link
+    document.getElementById("tbc").addEventListener("click", function() {
+      window.location.href = "https://tbcbank.ge/ka";
+    });
+
+    document.getElementById("geolab").addEventListener("click", function() {
+      window.location.href = "https://geolab.edu.ge/";
+    });
 });
