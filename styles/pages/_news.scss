@@ -1,0 +1,36 @@
+.news-main {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    .newspage {
+        width: 90vw;
+        max-width: 600px;
+
+        margin-top: 200px;
+        
+        .news-header {
+            .news-header-text {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                vertical-align: bottom;
+                
+                margin-bottom: 30px;
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .news-header-line {
+            border-top: 2px solid rgba(0, 0, 0, 0.5);
+
+			height: 1.5px;
+        }
+    }
+
+
+}

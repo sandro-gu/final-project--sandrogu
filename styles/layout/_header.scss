@@ -2,22 +2,43 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 75px;
-	transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+	height: auto;
+	// transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+	transition: all 0.3s ease;
 
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center	;
 
 	z-index: 100;
     
 	&.transparent {
 		backdrop-filter: blur(10px);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+		.header-container {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+
+		.header-dropdown {
+			backdrop-filter: blur(20px);
+			&.show{
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.dropdown-links {
+				ul li a {
+					text-decoration: none;
+					color: rgb(255, 255, 255);
+				}
+			}
+		}
 	}
 
 	&.solid {
 		background-color: white;
-		border-bottom: 1px solid rgb(78, 78, 78);
+
 
 		.header-content ul li a {
 			color: black;
@@ -37,12 +58,25 @@
 				border-bottom: 1px solid black;
 			}
 		}
+
+
+		.header-dropdown {
+			&.show{
+				border-bottom: 1px solid rgb(78, 78, 78);
+			}
+			.dropdown-links {
+				ul li a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
 	}
 
-
+	
 	.header-content {
-		height: 100%;
-		width: 75%;
+		height: 75px;
+		width: 75vw;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -82,6 +116,51 @@
 				}
 			}
 		}
+	}
 
+
+	.header-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		border-bottom: 1px solid rgb(78, 78, 78);
+	}
+
+	.header-dropdown {
+		width: 100%;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.1s ease-in, padding 0.1s ease-out;
+		border-bottom: 0px;
+
+		&.show {
+			max-height: 30px;
+		}
+
+		.dropdown-container{
+			width: 100%;
+			height: 30px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.dropdown-links {
+				width: 75vw;
+				display: flex;
+				gap: 40;
+				justify-content: flex-end;
+
+				ul {
+					display: flex;
+					gap: 40px;
+
+					li a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
 	}
 }
+

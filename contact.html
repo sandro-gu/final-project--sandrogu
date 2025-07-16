@@ -27,26 +27,37 @@
   </head>
   <body>
     <header class="header transparent" id="header">
-      <div class="header-content">
-        <div class="search">
-          <input type="text" class="input" placeholder="ძიება" />
-
-          <button class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+      <div class="header-container">
+        <div class="header-content">
+          <div class="search">
+            <input type="text" class="input" placeholder="ძიება" />
+            <button class="btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <ul>
+            <li>
+              <a href="index.html">მთავარი</a>
+            </li>
+            <li>
+              <a href="#" id="dropdown">სერვისები</a>
+            </li>
+            <li>
+              <a href="contact.html">კონტაქტი</a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <ul>
-          <li>
-            <a href="index.html">მთავარი</a>
-          </li>
-          <li>
-            <a href="info.html">სერვისები</a>
-          </li>
-          <li>
-            <a href="contact.html">კონტაქტი</a>
-          </li>
-        </ul>
+      <div class="header-dropdown" id="header-dropdown">
+        <div class="dropdown-container">
+          <div class="dropdown-links">
+            <ul>
+              <li><a href="info.html">მეტი ინფორმაცია</a></li>
+              <li><a href="news.html">სიახლეები</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -60,7 +71,7 @@
           <div class="aboutusparagraph">
             <h2>ვინ ვართ ჩვენ?</h2>
             <p>
-              ეს საიტი არის მიძღვნილი კლიმატის ცვლილების შესახებ ხალხის
+              ეს საიტი მიძღვნილია კლიმატის ცვლილების შესახებ ხალხის
               გაცნობიერებას. დამოუკიდებელი პროექტია, წამძღვარებული TBC-ის ჯეოლაბ
               სასწავლებლის მიერ. დამოუკიდებლად და ინდივიდუალურად განხორციელებული
               პროექტია.
@@ -195,6 +206,6 @@
       </div>
     </footer>
 
-    <script src="../javascript/contact.js"></script>
+    <script src="javascript/header.js"></script>
   </body>
 </html>
