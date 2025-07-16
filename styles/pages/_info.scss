@@ -1,0 +1,81 @@
+.section-container {
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+    margin-bottom: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .section-content {
+        display: flex;
+        gap: 50px;
+        width: 80vw;
+
+        max-width: 1400px;
+
+        .section-text {
+
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                margin-top: 30px;
+                line-height: 30px;
+                font-size: 18px;
+            }
+
+        }
+        
+
+        .section-image {
+            flex-shrink: 0;
+            border-radius: 2%;
+            background-color: blue;
+            width: 500px;
+            height: 500px;
+            max-width: 600px;
+
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+        }
+
+        #image1 {
+            background-image: url('../../images/Mann-Li-PNAS-MAin_0.jpeg');
+        }
+        #image2 {
+            background-image: url('../../images/trash.png');
+        }
+    }
+}
+
+
+.fullimage {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.384), transparent),
+                      url('../../images/vashlovani.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+
+
+    height: 900px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 80px;
+        color: white;
+    }
+}

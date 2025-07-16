@@ -553,5 +553,72 @@ main a, main p, footer a, footer p, header a, header p {
   font-family: "BPG Nostalgia", sans-serif;
   font-weight: 400px;
   font-size: 23px;
+  transition: background-color 0.3s ease;
   cursor: pointer;
+}
+.moreinfo-container .moreinfo-content button:hover {
+  background-color: #5d6d9c;
+}
+.moreinfo-container .moreinfo-content button a {
+  text-decoration: none;
+  color: white;
+}
+
+.section-container {
+  width: 100%;
+  height: auto;
+  margin-top: 200px;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-container .section-content {
+  display: flex;
+  gap: 50px;
+  width: 80vw;
+  max-width: 1400px;
+}
+.section-container .section-content .section-text h1 {
+  font-size: 55px;
+}
+.section-container .section-content .section-text p {
+  margin-top: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+.section-container .section-content .section-image {
+  flex-shrink: 0;
+  border-radius: 2%;
+  background-color: blue;
+  width: 500px;
+  height: 500px;
+  max-width: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.section-container .section-content #image1 {
+  background-image: url("../../images/Mann-Li-PNAS-MAin_0.jpeg");
+}
+.section-container .section-content #image2 {
+  background-image: url("../../images/trash.png");
+}
+
+.fullimage {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.384), transparent), url("../../images/vashlovani.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullimage h1 {
+  font-size: 80px;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
