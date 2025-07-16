@@ -1,0 +1,191 @@
+.aboutusimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+    max-height: 800px;
+    width: 100%;
+
+    background-color: blue;
+    background-image: linear-gradient(to left, black, transparent),
+                      url('../../images/1000_F_471993622_wkbr2S3BXVZlCii4hhbg7UQ3dpaJd9j2.jpg');
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    h1 {
+        font-size: 60px;
+        color: white;
+    }
+}
+
+
+.aboutus {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .aboutustext {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        width: 60vw;
+
+        max-width: 1200px;
+
+        .aboutusparagraph  {
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                margin-top: 30px;
+                line-height: 30px;
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+
+.slogan {
+    width: 100%;
+    background-color: #efeff0;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    .slogantext{
+        width: 80vw;
+        max-width: 1200px;
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            line-height: 30px;
+            font-size: 18px;
+        }
+    }
+}
+
+
+.contactus {
+    margin-top: 200px;
+    width: 100%;
+
+    margin-bottom: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    .contactus-title {
+        h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .contactus-line {
+            width: auto;
+			max-width: 1200px;
+    		border-top: 2px solid rgba(0, 0, 0, 0.5);
+
+			height: 1.5px;
+        }
+    }
+
+
+    .contactus-content {
+        margin-top: 100px;
+        display: flex;
+        gap: 200px;
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+
+
+        .contactlinks {
+            ul li {
+                margin: 10px;
+                list-style-type: circle;
+            }
+
+        }
+
+
+        .social {
+            .logos {
+                margin-top: 50px;
+                display: flex;
+                gap: 20px;
+
+                .socialmedia-logo {
+                    width: 40px;
+                    height: 40px;
+
+                    background-color: grey;
+                    border-radius: 20%;
+
+
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    transition: filter 0.2s ease;
+
+                    &:hover {
+                        transform: translate(0, 2px);
+                        filter: grayscale(80%);
+
+                        cursor: pointer;
+                    }
+                }
+
+
+                #social-bluesky {
+                    background-image: url('../../images/bluesky.png');
+                }
+
+                #social-twitter {
+                    background-image: url('../../images/twitter.jpg');
+                }
+
+                #social-facebook {
+                    background-image: url('../../images/facebook.png');
+                }
+
+                #social-instagram {
+                    background-image: url('../../images/instagram.png');
+                }
+            }
+        }
+    }
+}
