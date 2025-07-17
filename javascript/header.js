@@ -1,82 +1,61 @@
-document.addEventListener('DOMContentLoaded', function() {
+// search bar
+const search = document.querySelector('.search');
+const input = document.querySelector('.input');
+const btn = document.querySelector('.btn');
 
-    // search bar
-    const search = document.querySelector('.search');
-    const input = document.querySelector('.input');
-    const btn = document.querySelector('.btn');
+btn.addEventListener('click', () => {
+    search.classList.toggle('active');
+    input.focus()
+    
+})
 
-    btn.addEventListener('click', () => {
-        search.classList.toggle('active');
-        input.focus()
-        
-    })
+// turn solid on scroll
 
-
-    // header
-    window.addEventListener('scroll', function() {
-        const header = document.getElementById('header');
-        const heroHeight = document.querySelector('.landing-page').offsetHeight;
-        const scrollPosition = window.scrollY;
-        
-        // scroll progress
-        const scrollProgress = Math.min(scrollPosition / (heroHeight * 0.8), 1);
-        
-        if (scrollProgress > 0.1) {
-            header.classList.remove('transparent');
-            header.classList.add('solid');
-        } else {
-            header.classList.remove('solid');
-            header.classList.add('transparent');
-        }
-    });
-
-
-        // header
-    window.addEventListener('scroll', function() {
-        const header = document.getElementById('header');
-        const heroHeight = document.querySelector('.aboutusimage').offsetHeight;
-        const scrollPosition = window.scrollY;
-        
-        // scroll progress
-        const scrollProgress = Math.min(scrollPosition / (heroHeight * 0.8), 1);
-        
-        if (scrollProgress > 0.1) {
-            header.classList.remove('transparent');
-            header.classList.add('solid');
-        } else {
-            header.classList.remove('solid');
-            header.classList.add('transparent');
-        }
-    });
-
-    document.getElementById('dropdown').addEventListener('click', function(event) {
-        event.preventDefault();
-        const div = document.getElementById('header-dropdown');
-        div.classList.toggle('show');
-    });
-
-
-
-    // turn header transparent (article page)
-
-    window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
-    const landing = document.querySelector('.fullimage');
+    const hero = document.querySelector('.landing-page');
+    
+    if (!header || !hero) return;
+    
+    const heroHeight = hero.offsetHeight;
+    const scrollPosition = window.scrollY;
 
-    const headerRect = header.getBoundingClientRect();
-    const landingRect = landing.getBoundingClientRect();
+    const scrollProgress = Math.min(scrollPosition / (heroHeight * 0.8), 1);
 
-    const isOverlapping = !(
-        headerRect.bottom < landingRect.top ||
-        headerRect.top > landingRect.bottom
-    );
-
-    if (isOverlapping) {
-        header.classList.add('transparent');
-        header.classList.remove('solid');
-    } else {
+    if (scrollProgress > 0.1) {
         header.classList.remove('transparent');
         header.classList.add('solid');
+    } else {
+        header.classList.remove('solid');
+        header.classList.add('transparent');
     }
-    });
+});
+
+// header dropdown
+document.getElementById('dropdown').addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdown = document.getElementById('header-dropdown');
+    dropdown.classList.toggle('show');
+});
+
+document.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('header-dropdown');
+    const dropdownBtn = document.getElementById('dropdown');
+    
+    if (!dropdownBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+    }
+});
+
+
+
+
+// footer logo links 
+
+document.getElementById("tbc").addEventListener("click", function() {
+    window.location.href = "https://tbcbank.ge/ka";
+});
+
+document.getElementById("geolab").addEventListener("click", function() {
+    window.location.href = "https://geolab.edu.ge/";
 });

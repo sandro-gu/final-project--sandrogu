@@ -1,0 +1,136 @@
+.newsletter {
+    background-color: #333;
+    width: 100%;
+
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+
+    .newsletter-container {
+        width: 80vw;
+        max-width: 1200px;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .newsletter-text {
+            font-size: 20px;
+            font-family: "BPG Nostalgia", sans-serif;
+
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            i {
+                font-size: 45px;
+                color: rgba(255, 255, 255, 0.799);
+            }
+
+            .newsletter-text-right {
+                #newsletter-text-right-top {
+                    font-size: 22px;
+                    color: white;
+                    
+                    margin-bottom: 10px;
+                }
+                #newsletter-text-right-bottom {
+                    font-size: 14px;
+                    color: grey;
+                }
+
+            }
+        }
+
+
+
+        .email-input {
+            flex: 2;
+            display: flex;
+
+
+            height: 70px;
+
+            .newsletter-input {
+                flex: 7;
+                height: 70px;  
+
+                outline: none;
+                border: none;
+
+                margin-right: 10px;
+                padding: 5px 15px;
+                border-radius: 15px 0px 0px 15px;
+
+                font-family: "BPG Nostalgia", sans-serif;
+                font-size: 17px;
+            }
+
+
+
+            .newsletter-btn {
+                flex: 3;
+                height: 70px;
+
+                border-radius: 0px 15px 15px 0px;
+                border: none;
+
+
+                font-family: "BPG Nostalgia", sans-serif;
+                font-size: 17px;
+
+                cursor: pointer;
+
+                transition: background-color 0.1s ease;
+
+
+                &:active {
+                    background-color: grey;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) { 
+    .newsletter-container {
+        flex-direction: column;
+
+        .newsletter-text {
+            flex: 0 0 auto
+        }
+
+        .email-input {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+
+            height: 50px !important;
+
+            .newsletter-input {
+                height: 50px !important;
+
+                flex: 1;
+                min-width: 0;
+            }
+
+            .newsletter-btn {
+                height: 50px !important;
+
+                flex: 0 0 auto 
+            }
+        }
+    }
+}
