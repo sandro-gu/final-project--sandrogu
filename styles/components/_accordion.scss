@@ -27,7 +27,7 @@
         width: 60vw; 
         max-width: 1200px;
 
-        /* Style the buttons that are used to open and close the accordion panel */
+
         .accordion {
         background-color: #eee;
         color: #444;
@@ -43,12 +43,11 @@
         font-size: 18px;
         }
 
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
         .active, .accordion:hover {
         background-color: #ccc;
         }
 
-        /* Style the accordion panel. Note: hidden by default */
+
         .panel-inner {
             display: flex;
             gap: 20px;
@@ -83,5 +82,11 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .panel-inner {
+        flex-direction: column;
     }
 }

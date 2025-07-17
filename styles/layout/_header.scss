@@ -164,3 +164,26 @@
 	}
 }
 
+
+
+@media screen and (max-width: 600px) {
+	.header-content {
+		justify-content: center;
+		flex-direction: column;
+
+		margin: 10px 0;
+
+		.search {
+			justify-content: center !important;
+		}
+
+		ul {
+			margin-left: 0px !important;
+		}
+	}
+
+
+	.dropdown-links {
+		justify-content: center !important;
+	}
+}

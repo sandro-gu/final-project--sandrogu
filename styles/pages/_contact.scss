@@ -9,7 +9,7 @@
 
     background-color: blue;
     background-image: linear-gradient(to left, black, transparent),
-                      url('../../images/1000_F_471993622_wkbr2S3BXVZlCii4hhbg7UQ3dpaJd9j2.jpg');
+                      url('../../images/meeting.jpeg');
 
 
     background-size: cover;
@@ -187,5 +187,35 @@
                 }
             }
         }
+    }
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    .contactus-content {
+        flex-direction: column;
+        text-align: center;
+
+
+        .social {
+            .logos {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .aboutusimage {
+        h1 {
+            font-size: 14vw !important;
+        }
+    }
+    
+    p {
+        font-size: 16px !important;
+        line-height: 22px !important;
     }
 }
