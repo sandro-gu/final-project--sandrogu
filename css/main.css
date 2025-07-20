@@ -810,7 +810,7 @@ main a, main p, footer a, footer p, header a, header p {
   overflow: hidden;
 }
 .section-container .section-content #image1 {
-  background-image: url("/final-project--sandroguimages/Mann-Li-PNAS-MAin_0.jpeg");
+  background-image: url("/final-project--sandrogu/images/Mann-Li-PNAS-MAin_0.jpeg");
 }
 .section-container .section-content #image2 {
   background-image: url("/final-project--sandrogu/images/trash.png");
@@ -1126,16 +1126,16 @@ main a, main p, footer a, footer p, header a, header p {
   cursor: pointer;
 }
 .contactus .contactus-content .social .logos #social-bluesky {
-  background-image: url("images/bluesky.png");
+  background-image: url("/final-project--sandrogu/images/bluesky.png");
 }
 .contactus .contactus-content .social .logos #social-twitter {
-  background-image: url("images/twitter.jpg");
+  background-image: url("/final-project--sandrogu/images/twitter.jpg");
 }
 .contactus .contactus-content .social .logos #social-facebook {
-  background-image: url("images/facebook.png");
+  background-image: url("/final-project--sandrogu/images/facebook.png");
 }
 .contactus .contactus-content .social .logos #social-instagram {
-  background-image: url("images/instagram.png");
+  background-image: url("/final-project--sandrogu/images/instagram.png");
 }
 
 @media screen and (max-width: 700px) {
