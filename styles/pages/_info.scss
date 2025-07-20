@@ -48,10 +48,10 @@
         }
 
         #image1 {
-            background-image: url('../../images/Mann-Li-PNAS-MAin_0.jpeg');
+            background-image: url('images/Mann-Li-PNAS-MAin_0.jpeg');
         }
         #image2 {
-            background-image: url('../../images/trash.png');
+            background-image: url('images/trash.png');
         }
     }
 }
@@ -59,7 +59,7 @@
 
 .fullimage {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.384), transparent),
-                      url('../../images/vashlovani.jpg');
+                      url('images/vashlovani.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
