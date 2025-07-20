@@ -1,3 +1,5 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nostalgia/css/bpg-nostalgia.min.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -634,7 +636,7 @@ main a, main p, footer a, footer p, header a, header p {
 .landing-page {
   height: 100vh;
   background-color: white;
-  background-image: linear-gradient(to left, black, transparent), url("images/air-pollution.jpg");
+  background-image: linear-gradient(to left, black, transparent), url("/final-project--sandrogu/images/air-pollution.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -808,14 +810,14 @@ main a, main p, footer a, footer p, header a, header p {
   overflow: hidden;
 }
 .section-container .section-content #image1 {
-  background-image: url("images/Mann-Li-PNAS-MAin_0.jpeg");
+  background-image: url("/final-project--sandroguimages/Mann-Li-PNAS-MAin_0.jpeg");
 }
 .section-container .section-content #image2 {
-  background-image: url("images/trash.png");
+  background-image: url("/final-project--sandrogu/images/trash.png");
 }
 
 .fullimage {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.384), transparent), url("images/vashlovani.jpg");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.384), transparent), url("/final-project--sandrogu/images/vashlovani.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1008,7 +1010,7 @@ main a, main p, footer a, footer p, header a, header p {
   max-height: 800px;
   width: 100%;
   background-color: blue;
-  background-image: linear-gradient(to left, black, transparent), url("images/meeting.jpeg");
+  background-image: linear-gradient(to left, black, transparent), url("/final-project--sandrogu/images/meeting.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
